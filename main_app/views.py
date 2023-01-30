@@ -12,7 +12,5 @@ class Home(TemplateView):
 
 
 #ABOUT PAGE CLASS W/ FUNCTION 
-class About(View):
-
-    def get(self, request):
-        return HttpResponse("Developer About Page")
+class About(TemplateView):
+    template_name = "about.html"
