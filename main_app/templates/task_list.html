@@ -1,12 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1> Tasks </h1>
-<div> 
-{% for task in tasks %}
-<h3> {{task.title}} </h3>
-{% empty %}
-<h3> Create a task </h3>
-{% endfor %}
+<form class="mb-5" method="get">
+    <div>
+        <div>
+            <!--  input will search by name of artist  -->
+            <input class="input" type="text" title="title" placeholder="name" />
+        </div>
+        <div>
+            <input class="button is-success" type="submit" value="Search" />
+        </div>
+    </div>
+    <!--  redirect back to task_list without a query param -->
+    <a class="button is-dark" href="{% url 'task_list' %}">Clear Search</a>
+</form>
+
+<div>
+    {% for task in tasks %}
+    <h3> {{task.title}} </h3>
+    {% empty %}
+    <h3> Create a task </h3>
+    {% endfor %}
 
 </div>
 {% endblock %}
