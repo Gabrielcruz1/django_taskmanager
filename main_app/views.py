@@ -8,3 +8,10 @@ from django.http import HttpResponse #HANDLES RESPONSE
 class Home(View):
     def get (self, request):
         return HttpResponse('Task Manager Home')
+
+
+#ABOUT PAGE CLASS W/ FUNCTION 
+class About(View):
+
+    def get(self, request):
+        return HttpResponse("Developer About Page")
