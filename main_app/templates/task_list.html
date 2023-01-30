@@ -1,18 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1> Tasks </h1>
-<form class="mb-5" method="get">
+<form method="get">
     <div>
-        <div>
-            <!--  input will search by name of artist  -->
-            <input class="input" type="text" title="title" placeholder="name" />
-        </div>
-        <div>
-            <input class="button is-success" type="submit" value="Search" />
-        </div>
+        <!--  input will search by name of artist  -->
+        <input type="text" title="title" placeholder="name" />
+
+        <input type="submit" value="Search" />
+
+        <!--  redirect back to task_list without a query param -->
+        <a class="button is-dark" href="{% url 'task_list' %}">Clear Search</a>
     </div>
-    <!--  redirect back to task_list without a query param -->
-    <a class="button is-dark" href="{% url 'task_list' %}">Clear Search</a>
 </form>
 
 <div>
