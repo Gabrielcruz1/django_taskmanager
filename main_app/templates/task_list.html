@@ -17,7 +17,9 @@
 
 <div>
     {% for task in tasks %}
-    <h3> {{task.title}} </h3>
+    <a href="">
+        <h3> {{task.title}} </h3>
+    </a>
     {% empty %}
     <h3> Create a task </h3>
     {% endfor %}
