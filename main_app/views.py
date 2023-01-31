@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import View #HANDLES REQUESTS
 from django.http import HttpResponse #HANDLES RESPONSE
 from django.views.generic.base import TemplateView 
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic.detail import DetailView 
 from .models import Task 
 
@@ -34,8 +34,14 @@ class TaskCreate(CreateView):
     model = Task 
     fields = '__all__'
     template_name = 'task_create.html'
-    success_url = "/tasks/"
+    success_url = '/tasks/'
 
 class TaskDetail(DetailView):
     model = Task 
-    template_name = "task_detail.html"
+    template_name = 'task_detail.html'
+
+class TaskUpdate(UpdateView):
+    model = Task
+    fields = '__all__'
+    template_name = 'task_update.html'
+    success_url = '/tasks/'

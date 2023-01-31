@@ -20,6 +20,8 @@
     <a href="{% url 'task_detail' task.pk %}">
         <h3> {{task.title}} </h3>
     </a>
+    <a href="{% url 'task_update' task.pk %}"> Update
+    </a>
     {% empty %}
     <h3> Create a task </h3>
     {% endfor %}
