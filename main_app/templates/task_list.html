@@ -4,12 +4,12 @@
 <form method="get">
     <div>
         <!--  input will search by name of artist  -->
-        <input type="text" title="title" placeholder="name" />
+        <input type="text" title="title" placeholder="Task" />
 
         <input type="submit" value="Search" />
 
         <!--  redirect back to task_list without a query param -->
-        <a class="button is-dark" href="{% url 'task_list' %}">Clear Search</a>
+        <a href="{% url 'task_list' %}">Clear Search</a>
     </div>
 </form>
 
