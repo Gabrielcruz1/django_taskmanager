@@ -18,5 +18,6 @@ from django.urls import path, include # MUST IMPORT INCLUDE FOR INCLUDE METHOD
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main_app.urls')) # NEW LINE TO INCLUDE URLS OF OUR APP
+    path('', include('main_app.urls')), # NEW LINE TO INCLUDE URLS OF OUR APP
+    path('accounts/', include('django.contrib.auth.urls'))
 ]
