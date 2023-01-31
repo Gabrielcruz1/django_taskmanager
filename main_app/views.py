@@ -21,9 +21,10 @@ class TaskList(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        title = self.request.GET.get("title")
+        title = self.request.GET.get("name")
         if title != None:
             context["tasks"] = Task.objects.filter(title__icontains=title)
+            context["header"] = f"Looking for task {title}"
         else:
             context["tasks"] = Task.objects.all()
         return context
