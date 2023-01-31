@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
 {{task.title}}
+<a href="{% url 'task_delete' task.pk %}"> delete </a>
 {% endblock %}

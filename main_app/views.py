@@ -2,8 +2,9 @@ from django.shortcuts import render
 from django.views import View #HANDLES REQUESTS
 from django.http import HttpResponse #HANDLES RESPONSE
 from django.views.generic.base import TemplateView 
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView 
+from django.urls import reverse
 from .models import Task 
 
 # Create your views here.
@@ -45,3 +46,9 @@ class TaskUpdate(UpdateView):
     fields = '__all__'
     template_name = 'task_update.html'
     success_url = '/tasks/'
+
+class TaskDelete(DeleteView):
+    model = Task 
+    template_name = 'task_delete_confirmation.html'
+    success_url = '/tasks/'
+
