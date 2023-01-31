@@ -1,10 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View #HANDLES REQUESTS
 from django.http import HttpResponse #HANDLES RESPONSE
 from django.views.generic.base import TemplateView 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView 
-from django.urls import reverse
+from django.urls import reverse 
+from django.contrib.auth import login 
+from django.contrib.auth.forms import UserCreationForm
 from .models import Task 
 
 # Create your views here.
@@ -15,6 +17,26 @@ class Home(TemplateView):
 #ABOUT PAGE CLASS W/ FUNCTION 
 class About(TemplateView):
     template_name = "about.html"
+
+
+class Signup(View):
+    #FORM TO BE FILLED OUT 
+    def get(self, request):
+        form = UserCreationForm()
+        context = {"form": form}
+        return render(request, "registration/signup.html", context)
+    
+    #VALIDATE FORM AND LOGIN USER ON SUBMIT
+    def post(self, request):
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect("task_list")
+        else: 
+            context = {"form": form}
+            return render(request, "registraion/signup.html", context)
+
 
 
 class TaskList(TemplateView):
@@ -36,6 +58,14 @@ class TaskCreate(CreateView):
     fields = '__all__'
     template_name = 'task_create.html'
     success_url = '/tasks/'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user 
+        return super(TaskCreate, self).form_valid(form)
+
+    def get_success_url(self):
+        print(self.kwargs)
+        return reverse('task_detail', kwargs={'pk': self.object.pk})
 
 class TaskDetail(DetailView):
     model = Task 
