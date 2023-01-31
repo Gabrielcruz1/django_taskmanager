@@ -16,13 +16,15 @@
 
 <div>
     {% for task in tasks %}
-    <a href="{% url 'task_detail' task.pk %}">
-        <h3> {{task.title}}
-            <a href="{% url 'task_update' task.pk %}"> Update
-            </a>
-            <a href="{% url 'task_delete' task.pk %}"> delete </a>
-        </h3>
-    </a>
+    <div class="taskList">
+        <a href="{% url 'task_detail' task.pk %}">
+            <h3> {{task.title}}
+                <a href="{% url 'task_update' task.pk %}"> Update
+                </a>
+                <a href="{% url 'task_delete' task.pk %}"> delete </a>
+            </h3>
+        </a>
+    </div>
     {% empty %}
     <h3> Create a task </h3>
     {% endfor %}
