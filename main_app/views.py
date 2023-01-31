@@ -27,6 +27,7 @@ class TaskList(TemplateView):
             context["header"] = f"Looking for task {title}"
         else:
             context["tasks"] = Task.objects.all()
+            context["header"] = "Tasks"
         return context
 
 
