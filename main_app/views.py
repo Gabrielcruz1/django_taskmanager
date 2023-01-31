@@ -25,7 +25,7 @@ class TaskList(TemplateView):
         title = self.request.GET.get("name")
         if title != None:
             context["tasks"] = Task.objects.filter(title__icontains=title)
-            context["header"] = f"Looking for task {title}"
+            context["header"] = f"Searching for {title}"
         else:
             context["tasks"] = Task.objects.all()
             context["header"] = "Tasks"
