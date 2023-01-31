@@ -17,7 +17,7 @@
 
 <div>
     {% for task in tasks %}
-    <a href="">
+    <a href="{% url 'task_detail' task.pk %}">
         <h3> {{task.title}} </h3>
     </a>
     {% empty %}
