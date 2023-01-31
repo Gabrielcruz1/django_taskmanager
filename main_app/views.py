@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import View #HANDLES REQUESTS
 from django.http import HttpResponse #HANDLES RESPONSE
 from django.views.generic.base import TemplateView 
+from django.views.generic.edit import CreateView
 from .models import Task 
 
 # Create your views here.
@@ -30,4 +31,9 @@ class TaskList(TemplateView):
             context["header"] = "Tasks"
         return context
 
+class TaskCreate(CreateView):
+    model = Task 
+    fields = '__all__'
+    template_name = 'task_create.html'
+    success_url = "/tasks/"
 

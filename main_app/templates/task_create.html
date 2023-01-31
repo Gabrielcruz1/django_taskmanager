@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> Add Task </h1>
+
+<form>
+{% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="Submit" /> 
+</form>
+{% endblock %}
