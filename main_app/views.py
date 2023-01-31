@@ -8,6 +8,10 @@ from django.urls import reverse
 from django.contrib.auth import login 
 from django.contrib.auth.forms import UserCreationForm
 from .models import Task 
+# Auth
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+
 
 # Create your views here.
 
@@ -38,7 +42,7 @@ class Signup(View):
             return render(request, "registraion/signup.html", context)
 
 
-
+@method_decorator(login_required, name='dispatch')
 class TaskList(TemplateView):
     template_name = "task_list.html"
 
