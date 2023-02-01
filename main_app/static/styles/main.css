@@ -1,5 +1,20 @@
-h1{
+/* h1{
     text-align: center;
+} */
+.container  {
+   text-align: center;
 }
-.searchBar{
+.task{
+    padding: 10px;
+    text-decoration: none;
+}
+.updateLinkClass{
+    padding: 10px 5px 10px 5px;
+    text-decoration: none;
+}
+.deleteLinkClass{
+    text-decoration: none;
+}
+body{
+    /* background-color: red; */
 }
