@@ -1,0 +1,1 @@
+web: gunicorn taskmanager_project.wsgi
