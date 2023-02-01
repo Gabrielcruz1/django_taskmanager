@@ -7,6 +7,7 @@ from django.views.generic.detail import DetailView
 from django.urls import reverse 
 from django.contrib.auth import login 
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Task 
 # Auth
 from django.contrib.auth.decorators import login_required
@@ -15,12 +16,14 @@ from django.utils.decorators import method_decorator
 
 # Create your views here.
 
-class Home(TemplateView):
+class Home(LoginRequiredMixin, TemplateView):
     template_name = "home.html"
 
 #ABOUT PAGE CLASS W/ FUNCTION 
 class About(TemplateView):
     template_name = "about.html"
+
+
 
 
 class Signup(View):

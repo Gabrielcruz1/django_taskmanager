@@ -126,5 +126,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'main_app/static')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Add this variable to specify where successful logins should redirect to
+
 LOGIN_REDIRECT_URL = '/tasks/'
 LOGOUT_REDIRECT_URL = '/'

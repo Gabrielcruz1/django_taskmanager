@@ -1,5 +1,6 @@
 from django.urls import path
-from . import views
+from . import views 
+from django.contrib.auth.views import LogoutView
 
 # this like app.use() in express
 urlpatterns = [
