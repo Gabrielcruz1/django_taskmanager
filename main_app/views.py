@@ -42,7 +42,7 @@ class Signup(View):
             return redirect("task_list")
         else: 
             context = {"form": form}
-            return render(request, "registraion/signup.html", context)
+            return render(request, "registration/signup.html", context)
 
 
 @method_decorator(login_required, name='dispatch')
