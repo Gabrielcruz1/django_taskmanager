@@ -62,7 +62,7 @@ class TaskList(TemplateView):
 
 class TaskCreate(CreateView):
     model = Task 
-    fields = '__all__'
+    fields = ['title', 'description', 'complete']
     template_name = 'task_create.html'
     success_url = '/tasks/'
 
