@@ -80,7 +80,7 @@ class TaskDetail(DetailView):
 
 class TaskUpdate(UpdateView):
     model = Task
-    fields = '__all__'
+    fields = ['title', 'description', 'complete']
     template_name = 'task_update.html'
     success_url = '/tasks/'
 
