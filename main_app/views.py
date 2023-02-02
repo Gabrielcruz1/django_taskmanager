@@ -72,7 +72,7 @@ class TaskCreate(CreateView):
 
     def get_success_url(self):
         print(self.kwargs)
-        return reverse('task_detail', kwargs={'pk': self.object.pk})
+        return reverse('task_list')
 
 class TaskDetail(DetailView):
     model = Task 
