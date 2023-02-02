@@ -1,6 +1,10 @@
 body{
     background: linear-gradient(0.25turn, #bdc3c7 , #3e5063);
 }
+a{
+    text-decoration: none;
+    color: black
+}
 .container  {
    background-color: #819fa7;
    margin: auto;
@@ -8,11 +12,13 @@ body{
    box-shadow: 2px 2px 13px -4px rgba(0,0,0, 0.21) ;
 }
 .headerForTaskList{
-    /* padding-top: 20px; */
+    padding-top: 15px;
 }
 .taskListDiv{
     margin: 0 auto;
     padding: 15px 0px 15px 0px;
+    text-decoration: none;
+    /* display: flex; */
 }
 .task{
     text-decoration: none;
@@ -21,11 +27,24 @@ body{
     padding: 8px;
 }
 .updateLinkClass{
-    /* padding: 10px 5px 10px 5px; */
     text-decoration: none;
     color: black;
 }
 .deleteLinkClass{
     text-decoration: none;
     color: black;
+}
+
+
+/* DETAIL PAGE BELOW */
+.taskDetailDiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding: 35px ;
+}
+.taskDetailDeleteTag{
+    border: solid black 2px;
+    border-radius: 3px;
+    padding: 5px;
 }

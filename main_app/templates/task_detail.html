@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-{{task.title}}
-<a href="{% url 'task_delete' task.pk %}"> delete </a>
+<div class="taskDetailDiv">
+    {{task.title}}
+    <a class="taskDetailDeleteTag" href="{% url 'task_delete' task.pk %}"> delete </a>
+</div>
 {% endblock %}

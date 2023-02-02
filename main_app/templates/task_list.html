@@ -17,7 +17,7 @@
     {{form.as_p}}
     <input type="text" name="name" title="title" placeholder="Add Task" />
     <input type="submit" value="Submit" /> -->
-    <!-- <a href="{% url 'task_create' %}">Add Task</a> -->
+<!-- <a href="{% url 'task_create' %}">Add Task</a> -->
 <!-- </form> -->
 
 <!-- TASK LIST -->
@@ -25,8 +25,8 @@
     {% for task in tasks reversed %}
     <div class="taskListDiv">
         <a class="task" href="{% url 'task_detail' task.pk %}">{{task.title.title}}</a>
-        <a class="updateLinkClass" href="{% url 'task_update' task.pk %}"> Update</a>
-        <a class="deleteLinkClass" href="{% url 'task_delete' task.pk %}"> delete </a>
+            <a class="updateLinkClass" href="{% url 'task_update' task.pk %}"> Update</a>
+            <a class="deleteLinkClass" href="{% url 'task_delete' task.pk %}"> delete </a>
     </div>
     {% empty %}
     <h3 class="noTaskDiv"> Create a task </h3>
