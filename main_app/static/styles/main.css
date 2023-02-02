@@ -1,7 +1,12 @@
+body{
+    background-color: #f4f4f4;
+}
 .container  {
    text-align: center;
-   background-color: #45ADA8;
+   background-color: #5b6e74;
    margin: 100px;
+   border-radius: 10px;
+   box-shadow: 2px 2px 13px -4px rgba(0,0,0, 0.21) ;
 }
 .headerForTaskList{
     padding-top: 20px;
@@ -9,14 +14,14 @@
 .task{
     padding: 10px;
     text-decoration: none;
+    color: black;
 }
 .updateLinkClass{
     padding: 10px 5px 10px 5px;
     text-decoration: none;
+    color: black;
 }
 .deleteLinkClass{
     text-decoration: none;
-}
-body{
-    background-color:#547980 ;
+    color: black;
 }

@@ -12,7 +12,7 @@
         <a href="{% url 'task_list' %}">Clear Search</a>
 </form>
 </br>
-<form method="post">
+<!-- <form method="post">
     {% csrf_token %}
     {{form.as_p}}
     <input type="text" name="name" title="title" placeholder="Add Task" />
@@ -21,11 +21,10 @@
 
     <a href="{% url 'task_create' %}">Add Task</a>
     </div>
-</form>
-
+</form> -->
 <div>
     {% for task in tasks %}
-    <div class="taskList">
+    <div class="taskListDiv">
         <a class="task" href="{% url 'task_detail' task.pk %}">
             <h3> {{task.title}}
                 <a class="updateLinkClass" href="{% url 'task_update' task.pk %}"> Update
