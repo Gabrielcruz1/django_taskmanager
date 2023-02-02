@@ -1,27 +1,27 @@
 body{
-    background-color: #f4f4f4;
+    background: linear-gradient(0.25turn, #bdc3c7 , #3e5063);
 }
 .container  {
-   text-align: center;
-   background-color: #5b6e74;
-   margin: 100px 200px 100px 200px;
-   border-radius: 10px;
+   background-color: #819fa7;
+   margin: auto;
+   max-width: 600px;
    box-shadow: 2px 2px 13px -4px rgba(0,0,0, 0.21) ;
 }
 .headerForTaskList{
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
 .taskListDiv{
-    padding: 15px;
+    margin: 0 auto;
+    padding: 15px 0px 15px 0px;
 }
 .task{
     text-decoration: none;
     color: black;
-    border: solid red 2px;
+    border: solid black 2px;
     padding: 8px;
 }
 .updateLinkClass{
-    padding: 10px 5px 10px 5px;
+    /* padding: 10px 5px 10px 5px; */
     text-decoration: none;
     color: black;
 }

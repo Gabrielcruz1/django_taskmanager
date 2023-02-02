@@ -4,9 +4,10 @@
 <h1 class="headerForTaskList">{{header}}</h1>
 <!-- SEARCH FORM  -->
 <form method="get">
-        <input class="searchBar" type="text" name="name" title="title" placeholder="Search Task" />
-        <input type="submit" value="Search" />
-        <a href="{% url 'task_list' %}">Clear Search</a>
+    <input class="searchBar" type="text" name="name" title="title" placeholder="Search Task" />
+    <input type="submit" value="Search" />
+    <a href="{% url 'task_list' %}">Clear Search</a>
+    <a href="{% url 'task_create' %}">Add Task</a>
 </form>
 
 <!-- </br> -->
@@ -15,23 +16,20 @@
     {% csrf_token %}
     {{form.as_p}}
     <input type="text" name="name" title="title" placeholder="Add Task" />
-    <input type="submit" value="Submit" />
-    <a href="{% url 'task_create' %}">Add Task</a>
-</form> -->
+    <input type="submit" value="Submit" /> -->
+    <!-- <a href="{% url 'task_create' %}">Add Task</a> -->
+<!-- </form> -->
 
 <!-- TASK LIST -->
 <div>
     {% for task in tasks reversed %}
     <div class="taskListDiv">
-        <a class="task" href="{% url 'task_detail' task.pk %}">
-                {{task.title.title}}
-            </a>
-                <a class="updateLinkClass" href="{% url 'task_update' task.pk %}"> Update
-                </a>
-                <a class="deleteLinkClass" href="{% url 'task_delete' task.pk %}"> delete </a>
+        <a class="task" href="{% url 'task_detail' task.pk %}">{{task.title.title}}</a>
+        <a class="updateLinkClass" href="{% url 'task_update' task.pk %}"> Update</a>
+        <a class="deleteLinkClass" href="{% url 'task_delete' task.pk %}"> delete </a>
     </div>
     {% empty %}
-    <h3> Create a task </h3>
+    <h3 class="noTaskDiv"> Create a task </h3>
     {% endfor %}
 
 </div>
