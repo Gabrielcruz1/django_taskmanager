@@ -3,6 +3,7 @@
 } */
 .container  {
    text-align: center;
+   background-color: #45ADA8;
 }
 .task{
     padding: 10px;
@@ -16,5 +17,5 @@
     text-decoration: none;
 }
 body{
-    /* background-color: red; */
+    background-color:#547980 ;
 }
