@@ -11,10 +11,14 @@ body{
 .headerForTaskList{
     padding-top: 20px;
 }
+.taskListDiv{
+    padding: 15px;
+}
 .task{
     text-decoration: none;
     color: black;
     border: solid red 2px;
+    padding: 8px;
 }
 .updateLinkClass{
     padding: 10px 5px 10px 5px;

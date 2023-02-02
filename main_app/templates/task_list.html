@@ -1,27 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- HEADER -->
 <h1 class="headerForTaskList">{{header}}</h1>
+<!-- SEARCH FORM  -->
 <form method="get">
     <div>
-        <!--  input will search by name of artist  -->
         <input class="searchBar" type="text" name="name" title="title" placeholder="Search Task" />
-
         <input type="submit" value="Search" />
-
-        <!--  redirect back to task_list without a query param -->
         <a href="{% url 'task_list' %}">Clear Search</a>
 </form>
+
 </br>
+<!-- ADD TASK FORM  -->
 <form method="post">
     {% csrf_token %}
     {{form.as_p}}
     <input type="text" name="name" title="title" placeholder="Add Task" />
-
     <input type="submit" value="Submit" />
-
     <a href="{% url 'task_create' %}">Add Task</a>
     </div>
 </form>
+
+<!-- TASK LIST -->
 <div>
     {% for task in tasks reversed %}
     <div class="taskListDiv">
