@@ -1,3 +1,4 @@
+/* GENERAL STYLING */
 body{
     background: linear-gradient(0.25turn, #bdc3c7 , #3e5063);
 }
@@ -5,6 +6,20 @@ a{
     text-decoration: none;
     color: black
 }
+a:hover{
+    text-decoration: underline;
+}
+
+/* NAVIGATION CSS BELOW */
+.navigationClass{
+    border: solid black 5px;
+}
+.navigationLinks{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* TASK LIST PAGE BELOW */
 .container  {
    background-color: #819fa7;
    margin: auto;

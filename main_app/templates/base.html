@@ -11,17 +11,23 @@
     </head>
     <body >
         {% if user.is_authenticated %}
-        <nav >
-            <div >
+    
+            <div class="navigationClass">
+                <!-- <div> -->
+                    <span class="navigationLinks"> 
+                    Hello {{user| title}}
+                <!-- </div> -->
                 <a href="/about">About</a>
                 <a href="{% url 'logout' %}">Logout</a>
                 <a href="/tasks/">Task List</a>
+            </span> 
             </div>
+
             {% else %}
             <a href="/about">About</a>
             <a href="{% url 'login' %}">Log In</a>
             <a href="{% url 'signup' %}">Sign Up</a>
-        </nav>
+       
         {% endif %}
         <div class="container">
 
