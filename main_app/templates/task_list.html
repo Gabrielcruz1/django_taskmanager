@@ -23,7 +23,7 @@
     </div>
 </form>
 <div>
-    {% for task in tasks %}
+    {% for task in tasks reversed %}
     <div class="taskListDiv">
         <a class="task" href="{% url 'task_detail' task.pk %}">
             <!-- <p> -->
