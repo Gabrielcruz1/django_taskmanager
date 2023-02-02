@@ -1,8 +1,10 @@
 .container  {
    text-align: center;
    background-color: #45ADA8;
-   max-width: 550px;
-  
+   margin: 100px;
+}
+.headerForTaskList{
+    padding-top: 20px;
 }
 .task{
     padding: 10px;
