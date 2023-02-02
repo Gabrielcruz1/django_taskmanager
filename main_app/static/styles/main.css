@@ -12,9 +12,9 @@ body{
     padding-top: 20px;
 }
 .task{
-    padding: 10px;
     text-decoration: none;
     color: black;
+    border: solid red 2px;
 }
 .updateLinkClass{
     padding: 10px 5px 10px 5px;
