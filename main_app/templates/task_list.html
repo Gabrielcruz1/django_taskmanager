@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
 <!-- HEADER -->
 <div>
@@ -7,6 +8,7 @@
 <!-- SEARCH FORM  -->
 <div class="searchBarDiv">
     <form method="get">
+        {{ form|crispy }}
         <input class="searchBar" type="text" name="name" title="title" placeholder="Search Task" />
         <input type="submit" value="Search" />
         <a class="clearSearchLink" href="{% url 'task_list' %}">Clear Search</a>

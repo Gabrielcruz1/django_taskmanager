@@ -31,7 +31,7 @@ textarea {
 /* LOGIN PAGE BELOW */
 .logInTitle{
    text-align: center;
-    padding: 10px 0px 10px 2px;
+   padding: 10px 0px 10px 2px;
 }
 .logInForm{
    text-align: center;
@@ -42,9 +42,6 @@ textarea {
     text-align: center;
     padding: 10px 0px 10px 2px;
 }
-/* .signInForm{
-    text-align: center;
-} */
 
 
 /* NAVIGATION CSS BELOW */
@@ -80,9 +77,7 @@ textarea {
 .addTaskLink{
     padding-left: 40px ;
 }
-.linkClass{
 
-}
 
 /* DETAIL PAGE BELOW */
 .taskDetailDiv {
@@ -98,10 +93,21 @@ textarea {
     margin: 5px;
 }
 
+
 /* ADD TASK PAGE BELOW  */
 .addTaskTitle{
     padding: 10px 0px 10px 2px;
 }
+
+/* DELETE PAGE BELOW */
+.deleteTaskTitle{
+    padding: 10px 0px 10px 5px;
+}
+.deleteTaskOptions{
+    text-align: center;
+    padding: 10px;
+}
+
 
 
 /* ABOUT PAGE */

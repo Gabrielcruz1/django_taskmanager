@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Are you sure you want to Delete {{task.title}}?</h1>
+<h1 class="deleteTaskTitle">Are you sure you want to Delete {{task.title}}?</h1>
 <form method="post">
     {% csrf_token %}
-    <div>
+    <div class="deleteTaskOptions" >
         <!-- confirm artist delete -->
         <input type="submit" value="Confirm" />
         <!-- Redirect back to detail on cancel -->
-        <a href="{% url 'task_list' %}">Cancel</a>
+        <a class="" href="{% url 'task_list' %}">Cancel</a>
     </div>
 </form>
 {% endblock %}
