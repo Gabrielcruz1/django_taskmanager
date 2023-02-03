@@ -77,3 +77,14 @@ a:hover {
     padding: 5px;
     margin: 5px;
 }
+
+/* ABOUT PAGE */
+.devName{
+    text-align: center;
+}
+.aboutPar{
+    padding: 10px;
+}
+.contactMe{
+    padding: 10px;
+}
