@@ -55,9 +55,11 @@ class TaskList(TemplateView):
         if title != None:
             context["tasks"] = Task.objects.filter(title__icontains=title, user=self.request.user)
             context["header"] = f"Searching for {title}"
+            context["count"] = Task.objects.filter(user=self.request.user, complete=False).count()
         else:
             context["tasks"] = Task.objects.filter(user=self.request.user)
             context["header"] = "Tasks"
+            context["count"] = Task.objects.filter(user=self.request.user, complete=False).count()
         return context
 
 class TaskCreate(CreateView):
