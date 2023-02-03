@@ -26,7 +26,7 @@ a:hover {
 .navigationClass {
     background-color: #819fa7;
     border: solid black 2px;
-    padding: 10px;
+    padding-left: 10px;
     display: grid;
     column-gap: normal;
 }
