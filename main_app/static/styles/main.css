@@ -19,6 +19,33 @@ a:hover {
     max-width: 600px;
     box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
 }
+input[type=text],
+input[type=password],
+textarea {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #757575;
+    border-radius: 5px;
+}
+
+
+/* LOGIN PAGE BELOW */
+.logInTitle{
+   text-align: center;
+    padding: 10px 0px 10px 2px;
+}
+.logInForm{
+   text-align: center;
+}
+
+/* SIGN UP PAGE BELOW */
+.signUpTitle{
+    text-align: center;
+    padding: 10px 0px 10px 2px;
+}
+/* .signInForm{
+    text-align: center;
+} */
 
 
 /* NAVIGATION CSS BELOW */
@@ -54,7 +81,9 @@ a:hover {
 .addTaskLink{
     padding-left: 40px ;
 }
+.linkClass{
 
+}
 
 /* DETAIL PAGE BELOW */
 .taskDetailDiv {
@@ -68,6 +97,11 @@ a:hover {
     border-radius: 3px;
     padding: 5px;
     margin: 5px;
+}
+
+/* ADD TASK PAGE BELOW  */
+.addTaskTitle{
+    padding: 10px 0px 10px 2px;
 }
 
 
