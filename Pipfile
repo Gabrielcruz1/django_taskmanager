@@ -9,6 +9,7 @@ django-on-heroku = "*"
 gunicorn = "*"
 whitenoise = "*"
 python-decouple = "*"
+django-crispy-forms = "*"
 
 [dev-packages]
 
