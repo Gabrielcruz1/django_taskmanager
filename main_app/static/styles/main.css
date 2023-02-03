@@ -1,39 +1,52 @@
 /* GENERAL STYLING */
-body{
-    background: linear-gradient(0.25turn, #bdc3c7 , #3e5063);
+body {
+    background: #fafafa;
+    font-family: 'Roboto', sans-serif;
+    ;
+    padding-top: 10px;
 }
-a{
+
+a {
     text-decoration: none;
     color: black
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
 
-/* NAVIGATION CSS BELOW */
-.navigationClass{
-    border: solid black 5px;
+.container {
+    background-color: #819fa7;
+    margin: auto;
+    max-width: 600px;
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
 }
-.navigationLinks{
+
+/* NAVIGATION CSS BELOW */
+.navigationClass {
+    background-color: #819fa7;
+    border: solid black 2px;
+    padding: 10px;
+    display: grid;
+    column-gap: normal;
+}
+
+.navigationLinks {
     display: flex;
     justify-content: space-between;
 }
 
 /* TASK LIST PAGE BELOW */
-.container  {
-   background-color: #819fa7;
-   margin: auto;
-   max-width: 600px;
-   box-shadow: 2px 2px 13px -4px rgba(0,0,0, 0.21) ;
-}
-.headerForTaskList{
+/* .headerForTaskList{
     padding-top: 15px;
 }
 .taskListDiv{
     margin: 0 auto;
-    padding: 15px 0px 15px 0px;
+    padding: 25px 0px 15px 0px;
     text-decoration: none;
-    /* display: flex; */
+}
+.updateAndDeleteSpan{
+    padding-left: 200px;
 }
 .task{
     text-decoration: none;
@@ -48,18 +61,19 @@ a:hover{
 .deleteLinkClass{
     text-decoration: none;
     color: black;
-}
+} */
 
 
 /* DETAIL PAGE BELOW */
-.taskDetailDiv{
+.taskDetailDiv {
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
-    padding: 35px ;
+    padding: 35px;
 }
-.taskDetailDeleteTag{
+.detailTags{
     border: solid black 2px;
     border-radius: 3px;
     padding: 5px;
+    margin: 5px;
 }

@@ -2,6 +2,9 @@
 {% block content %}
 <div class="taskDetailDiv">
     {{task.title}}
-    <a class="taskDetailDeleteTag" href="{% url 'task_delete' task.pk %}"> Remove </a>
+    <div>
+        <a class="detailTags" href="{% url 'task_list' %}">Back to list</a>
+        <a class="detailTags" href="{% url 'task_delete' task.pk %}"> Remove </a>
+    </div>
 </div>
 {% endblock %}

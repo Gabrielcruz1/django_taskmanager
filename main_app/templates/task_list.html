@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 <!-- HEADER -->
-<h1 class="headerForTaskList">{{count}}</h1>
+<div>
+<h1 class="headerForTaskList">Incomplete tasks: {{count}}</h1>
+</div>
 <!-- SEARCH FORM  -->
-<form method="get">
+<div>
+<form method="get" >
     <input class="searchBar" type="text" name="name" title="title" placeholder="Search Task" />
     <input type="submit" value="Search" />
+
     <a href="{% url 'task_list' %}">Clear Search</a>
     <a href="{% url 'task_create' %}">Add Task</a>
 </form>
+</div>
 
 <!-- </br> -->
 <!-- ADD TASK FORM  -->
@@ -25,8 +30,10 @@
     {% for task in tasks reversed %}
     <div class="taskListDiv">
         <a class="task" href="{% url 'task_detail' task.pk %}">{{task.title.title}}</a>
+        <span class="updateAndDeleteSpan"></span>
             <a class="updateLinkClass" href="{% url 'task_update' task.pk %}"> Update</a>
             <a class="deleteLinkClass" href="{% url 'task_delete' task.pk %}"> delete </a>
+       </span>
     </div>
     {% empty %}
     <h3 class="noTaskDiv"> Create a task </h3>
