@@ -10,17 +10,16 @@ a {
     text-decoration: none;
     color: black
 }
-
 a:hover {
     text-decoration: underline;
 }
-
 .container {
     background-color: #819fa7;
     margin: auto;
     max-width: 600px;
     box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
 }
+
 
 /* NAVIGATION CSS BELOW */
 .navigationClass {
@@ -30,38 +29,31 @@ a:hover {
     display: grid;
     column-gap: normal;
 }
-
 .navigationLinks {
     display: flex;
     justify-content: space-between;
 }
 
+
 /* TASK LIST PAGE BELOW */
-/* .headerForTaskList{
-    padding-top: 15px;
+.tasksDiv{
+    border-top: solid black 1px;
+    padding-top: 20px;
+    padding-bottom: 2px;
+    padding-left: 0.5px;
 }
-.taskListDiv{
-    margin: 0 auto;
-    padding: 25px 0px 15px 0px;
-    text-decoration: none;
+.headerForTaskList{
+    padding: 10px 0px 10px 2px;
 }
-.updateAndDeleteSpan{
-    padding-left: 200px;
+.searchBarDiv{
+    padding: 5px 0px 5px 2px;
 }
-.task{
-    text-decoration: none;
-    color: black;
-    border: solid black 2px;
-    padding: 8px;
+.clearSearchLink{
+    padding-left: 10px;
 }
-.updateLinkClass{
-    text-decoration: none;
-    color: black;
+.addTaskLink{
+    padding-left: 40px ;
 }
-.deleteLinkClass{
-    text-decoration: none;
-    color: black;
-} */
 
 
 /* DETAIL PAGE BELOW */
@@ -77,6 +69,7 @@ a:hover {
     padding: 5px;
     margin: 5px;
 }
+
 
 /* ABOUT PAGE */
 .devName{

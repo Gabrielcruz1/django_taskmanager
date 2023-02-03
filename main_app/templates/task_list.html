@@ -5,13 +5,12 @@
     <h1 class="headerForTaskList">Incomplete tasks: {{count}}</h1>
 </div>
 <!-- SEARCH FORM  -->
-<div>
+<div class="searchBarDiv">
     <form method="get">
         <input class="searchBar" type="text" name="name" title="title" placeholder="Search Task" />
         <input type="submit" value="Search" />
-
-        <a href="{% url 'task_list' %}">Clear Search</a>
-        <a href="{% url 'task_create' %}">Add Task</a>
+        <a class="clearSearchLink" href="{% url 'task_list' %}">Clear Search</a>
+        <a class="addTaskLink" href="{% url 'task_create' %}">Add Task</a>
     </form>
 </div>
 
@@ -33,9 +32,9 @@
         <div class="taskName">
             <div class="completedTask"> </div>
             <s> <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a></s>
+            <a class="deleteLinkClass" href="{% url 'task_delete' task.pk %}"> delete </a>
         </div>
-        <a class="updateLinkClass" href="{% url 'task_update' task.pk %}"> Update</a>
-        <a class="deleteLinkClass" href="{% url 'task_delete' task.pk %}"> delete </a>
+       
         {% else %}
         <div class="taskName">
             <div class="inCompletedTask"> </div>
