@@ -32,21 +32,21 @@
     <div class="tasksDiv">
         {% if task.complete %}
         <div class="taskName">
-            <div class="completedTask"> </div>
+            
             <s> <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a></s>
-            <a class="deleteLinkClass" href="{% url 'task_delete' task.pk %}"> delete </a>
+            <a class="deleteLinkClass" href="{% url 'task_delete' task.pk %}"> Delete </a>
         </div>
-       
+
         {% else %}
         <div class="taskName">
             <div class="inCompletedTask">
-            <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a>
-            <a class="linkClass" href="{% url 'task_update' task.pk %}"> Update</a>
-            <a class="linkClass" href="{% url 'task_delete' task.pk %}"> delete </a>
-            {% endif %}
+                <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a>
+                <span class="spanClass"><a class="linkClass" href="{% url 'task_update' task.pk %}"> Update</a>
+                <a class="linkClass" href="{% url 'task_delete' task.pk %}"> Delete </a></span>
+                {% endif %}
+            </div>
+            {% empty %}
+            <h3 class="noTaskDiv"> Create a task </h3>
+            {% endfor %}
         </div>
-        {% empty %}
-        <h3 class="noTaskDiv"> Create a task </h3>
-        {% endfor %}
-    </div>
-{% endblock %}
+        {% endblock %}
