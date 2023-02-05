@@ -4,7 +4,6 @@ body {
     font-family: 'Roboto', sans-serif;
     padding-top: 10px;
 }
-
 a {
     text-decoration: none;
     color: black
@@ -13,40 +12,23 @@ a:hover {
     text-decoration: underline;
 }
 .container {
-    /* background-color: #819fa7; */
     background-color:  #355C7D ;
     margin: auto;
     max-width: 600px;
-    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 4px 13px 5px rgba(0, 0, 0, 8);
 }
 input[type=text],
 input[type=password],
 textarea {
-    width: 90%;
+    width: 95%;
     padding: 5px;
     border: 1px solid #757575;
     border-radius: 5px;
 }
 
-/* LOGIN PAGE BELOW */
-.logInTitle{
-   text-align: center;
-   padding: 10px 0px 10px 2px;
-}
-.logInForm{
-   text-align: center;
-}
-
-/* SIGN UP PAGE BELOW */
-.signUpTitle{
-    text-align: center;
-    padding: 10px 0px 10px 2px;
-}
-
-
 /* NAVIGATION CSS BELOW */
 .navigationClass {
-    background-color: #819fa7;
+    background-color: #355C7D;
     border: solid black 2px;
     padding-left: 10px ;
     display: grid;
@@ -56,6 +38,24 @@ textarea {
     display: flex;
     justify-content: space-between;
 }
+
+
+/* LOGIN PAGE BELOW */
+.logInTitle{
+    text-align: center;
+    padding: 10px 0px 10px 2px;
+ }
+ .logInForm{
+    text-align: center;
+ }
+ 
+ /* SIGN UP PAGE BELOW */
+ .signUpTitle{
+     text-align: center;
+     padding: 10px 0px 10px 2px;
+ }
+ 
+
 
 
 /* TASK LIST PAGE BELOW */
@@ -118,8 +118,17 @@ textarea {
 
 /* ADD TASK PAGE BELOW  */
 .addTaskTitle{
-    padding: 10px 0px 10px 2px;
+    text-align: center;
+    padding-top: 10px;
 }
+.addTaskForm{
+    text-align: center;
+    padding: 10px;
+}
+.submitButton{
+   margin: 10px;
+}
+
 
 /* DELETE PAGE BELOW */
 .deleteTaskTitle{

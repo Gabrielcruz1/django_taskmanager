@@ -1,7 +1,7 @@
 {% extends 'base.html' %} 
 {% block content %}
 <h1 class="signUpTitle">Sign Up</h1>
-<div class="signInForm" > 
+<div > 
 <form method="post" action="{% url 'signup' %}">
     {% csrf_token %} {{ form.as_p }}
     <input type="submit" value="Sign Up" />

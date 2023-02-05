@@ -2,11 +2,11 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <h1 class="addTaskTitle"> Add Task </h1>
-<div> 
+<div class="addTaskForm"> 
 <form method="post">
 {% csrf_token %}
 {{ form|crispy }}
-<input type="submit" value="Submit" /> 
+<input class="submitButton" type="submit" value="Submit" /> 
 </form>
 </div>
 {% endblock %}
