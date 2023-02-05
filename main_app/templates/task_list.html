@@ -3,13 +3,13 @@
 {% block content %}
 <!-- HEADER -->
 <div>
-    <h1 class="headerForTaskList">Incomplete tasks: {{count}}</h1>
+    <h1 class="taskListTitle">Incomplete tasks: {{count}}</h1>
 </div>
 <!-- SEARCH FORM  -->
 <div class="searchBarDiv">
     <form method="get">
         {{ form|crispy }}
-        <input class="searchBar" type="text" name="name" title="title" placeholder="Search Task" />
+        <input type="text" name="name" title="title" placeholder="Search Task" />
         <input type="submit" value="Search" />
         <a class="clearSearchLink" href="{% url 'task_list' %}">Clear Search</a>
         <a class="addTaskLink" href="{% url 'task_create' %}">Add Task</a>
@@ -22,31 +22,30 @@
     {% csrf_token %}
     {{form.as_p}}
     <input type="text" name="name" title="title" placeholder="Add Task" />
-    <input type="submit" value="Submit" /> -->
-<!-- <a href="{% url 'task_create' %}">Add Task</a> -->
-<!-- </form> -->
+    <input type="submit" value="Submit" />
+<a href="{% url 'task_create' %}">Add Task</a>
+</form> -->
 
 <!-- TASK LIST -->
-<div class="taskListDiv">
-    {% for task in tasks reversed %}
-    <div class="tasksDiv">
-        {% if task.complete %}
-        <div class="taskName">
-            
-            <s> <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a></s>
-            <a class="deleteLinkClass" href="{% url 'task_delete' task.pk %}"> Delete </a>
+<!-- <div class="taskListDiv"> -->
+{% for task in tasks reversed %}
+<div class="tasksDiv">
+    {% if task.complete %}
+    <div class="completedTask">
+        <s> <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a></s>
+        <a href="{% url 'task_delete' task.pk %}"> Delete </a>
+    </div>
+    {% else %}
+        <div class="inCompletedTask">
+            <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a>
+         <span>
+            <a class="linkClass" href="{% url 'task_update' task.pk %}"> Update</a>
+            <a class="linkClass" href="{% url 'task_delete' task.pk %}"> Delete </a>
+        </span>
+            {% endif %}
         </div>
-
-        {% else %}
-        <div class="taskName">
-            <div class="inCompletedTask">
-                <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a>
-                <span class="spanClass"><a class="linkClass" href="{% url 'task_update' task.pk %}"> Update</a>
-                <a class="linkClass" href="{% url 'task_delete' task.pk %}"> Delete </a></span>
-                {% endif %}
-            </div>
-            {% empty %}
-            <h3 class="noTaskDiv"> Create a task </h3>
-            {% endfor %}
-        </div>
-        {% endblock %}
+        {% empty %}
+        <h3 class="noTaskDiv"> Create a task </h3>
+        {% endfor %}
+    {% endblock %}
+</div>
