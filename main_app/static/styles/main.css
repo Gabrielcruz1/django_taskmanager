@@ -1,8 +1,7 @@
 /* GENERAL STYLING */
 body {
-    background: #fafafa;
+    background: white;
     font-family: 'Roboto', sans-serif;
-    ;
     padding-top: 10px;
 }
 
@@ -14,7 +13,8 @@ a:hover {
     text-decoration: underline;
 }
 .container {
-    background-color: #819fa7;
+    /* background-color: #819fa7; */
+    background-color:  #355C7D ;
     margin: auto;
     max-width: 600px;
     box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);

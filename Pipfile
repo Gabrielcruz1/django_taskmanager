@@ -15,3 +15,4 @@ django-crispy-forms = "*"
 
 [requires]
 python_version = "3.9"
+ 
