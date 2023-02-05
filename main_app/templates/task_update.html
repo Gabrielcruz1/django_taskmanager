@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-<h1 >Update {{task.title}}</h1>
-
+<h1 class="updateTitle" >Update {{task.title}}</h1>
+<div class="updateForm"> 
 <form method="post">
-  {% csrf_token %} {{ form|crispy }}<input type="submit" value="Submit" />
+  {% csrf_token %} {{ form|crispy }}
+  <a class="" href="{% url 'task_list' %}">Back to list</a>
+  <input class="submitButton" type="submit" value="Submit" />
 </form>
-
+</div>
 {% endblock %}

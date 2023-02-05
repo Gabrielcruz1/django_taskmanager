@@ -29,10 +29,10 @@ textarea {
 /* NAVIGATION CSS BELOW */
 .navigationClass {
     background-color: #355C7D;
-    border: solid black 2px;
     padding-left: 10px ;
     display: grid;
     column-gap: normal;
+    box-shadow: 2px 3px 11px 5px rgba(0, 0, 0, 5);
 }
 .navigationLinks {
     display: flex;
@@ -116,18 +116,34 @@ textarea {
 }
 
 
-/* ADD TASK PAGE BELOW  */
+/* TASK CREATE PAGE */
 .addTaskTitle{
     text-align: center;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 .addTaskForm{
     text-align: center;
-    padding: 10px;
+    padding: 0px 22px 22px 22px;
+    margin-left: 55px;
+    margin-right: 55px;
 }
 .submitButton{
-   margin: 10px;
+   margin: 20px;
 }
+
+
+/* UPDATE PAGE BELOW */
+.updateTitle{
+    text-align: center;
+    padding: 10px;
+}
+.updateForm{
+    text-align: center;
+    padding: 0px 22px 22px 22px;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
 
 
 /* DELETE PAGE BELOW */
@@ -143,14 +159,15 @@ textarea {
 
 /* ABOUT PAGE */
 .devName{
+    padding-top: 10px;
     text-align: center;
 }
-.aboutPar{
+.aboutPar, .contactMe{
+    font-weight:bolder;
     padding: 10px;
 }
-.contactMe{
-    padding: 10px;
-}
+
+
 
 /* HOME PAGE */
 .homePageClass{
