@@ -4,10 +4,8 @@
 <form method="post">
     {% csrf_token %}
     <div class="deleteTaskOptions" >
-        <!-- confirm artist delete -->
-        <input type="submit" value="Confirm" />
-        <!-- Redirect back to detail on cancel -->
         <a class="" href="{% url 'task_list' %}">Cancel</a>
+        <input type="submit" value="Confirm" />
     </div>
 </form>
 {% endblock %}

@@ -25,7 +25,6 @@ textarea {
     border: 1px solid #757575;
     border-radius: 5px;
 }
-
 /* NAVIGATION CSS BELOW */
 .navigationClass {
     background-color: #355C7D;
@@ -38,8 +37,6 @@ textarea {
     display: flex;
     justify-content: space-between;
 }
-
-
 /* LOGIN PAGE BELOW */
 .logInTitle{
     text-align: center;
@@ -47,14 +44,20 @@ textarea {
  }
  .logInForm{
     text-align: center;
+    padding: 0px 22px 22px 22px;
+    margin-left: 55px;
+    margin-right: 55px;
  }
- 
  /* SIGN UP PAGE BELOW */
  .signUpTitle{
      text-align: center;
      padding: 10px 0px 10px 2px;
  }
- 
+ .signUpForm{
+    padding: 0px 22px 22px 22px;
+    margin-left: 55px;
+    margin-right: 55px;
+ }
 
 
 
@@ -116,6 +119,12 @@ textarea {
 }
 
 
+
+
+
+
+
+
 /* TASK CREATE PAGE */
 .addTaskTitle{
     text-align: center;
@@ -130,12 +139,10 @@ textarea {
 .submitButton{
    margin: 20px;
 }
-
-
 /* UPDATE PAGE BELOW */
 .updateTitle{
     text-align: center;
-    padding: 10px;
+    padding-top: 30px;
 }
 .updateForm{
     text-align: center;
@@ -143,34 +150,26 @@ textarea {
     margin-left: 55px;
     margin-right: 55px;
 }
-
-
-
 /* DELETE PAGE BELOW */
 .deleteTaskTitle{
-    padding: 10px 0px 10px 5px;
+    text-align: center;
+    padding: 30px;
 }
 .deleteTaskOptions{
     text-align: center;
-    padding: 10px;
+    padding: 0px 80px 40px 80px;
 }
-
-
-
 /* ABOUT PAGE */
 .devName{
-    padding-top: 10px;
+    padding-top: 20px;
     text-align: center;
 }
 .aboutPar, .contactMe{
     font-weight:bolder;
-    padding: 10px;
+    padding: 28px;
 }
-
-
-
 /* HOME PAGE */
 .homePageClass{
     text-align: center;
-    padding: 10px;
+    padding: 30px;
 }
