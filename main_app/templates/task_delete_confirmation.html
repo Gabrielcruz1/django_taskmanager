@@ -5,7 +5,7 @@
     {% csrf_token %}
     <div class="deleteTaskOptions" >
         <a class="" href="{% url 'task_list' %}">Cancel</a>
-        <input type="submit" value="Confirm" />
+        <input class="deleteButton" type="submit" value="Confirm" />
     </div>
 </form>
 {% endblock %}

@@ -21,13 +21,11 @@
     {% if user.is_authenticated %}
 
     <div class="navigationClass">
-            Hello {{user| title}}
-            <a href="/tasks/">Task List</a>
-            <a href="/about">About</a>
-            <a href="{% url 'logout' %}">Logout</a>
-        </div>
+        <span class="navGreet"> Hello {{user| title}}</span>
+        <a href="/tasks/">Task List</a>
+        <a href="/about">About</a>
+        <a href="{% url 'logout' %}">Logout</a>
     </div>
-
     {% else %}
     <a href="/about">About</a>
     <a href="{% url 'login' %}">Log In</a>

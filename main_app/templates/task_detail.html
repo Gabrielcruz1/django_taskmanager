@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="taskDetailDiv">
-    <p> {{task.title.title}} DUE DATE: 
-     {{task.description.title}}</p>
-    <div>
+    {{task.title.title}} -- DUE DATE:
+    {{task.description.title}}
+    <span >
         <a class="detailTags" href="{% url 'task_list' %}">Back to list</a>
         <a class="detailTags" href="{% url 'task_delete' task.pk %}"> Remove </a>
-    </div>
+    </span>
 </div>
 {% endblock %}

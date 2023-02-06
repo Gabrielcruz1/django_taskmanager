@@ -1,22 +1,26 @@
 /* GENERAL STYLING */
 body {
-    background: white;
+    background: lightgrey;
     font-family: 'Roboto', sans-serif;
     padding-top: 10px;
 }
+
 a {
     text-decoration: none;
     color: black
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 .container {
-    background-color:  #355C7D ;
+    background-color: #355C7D;
     margin: auto;
     max-width: 600px;
     box-shadow: 2px 4px 13px 5px rgba(0, 0, 0, 8);
 }
+
 input[type=text],
 input[type=password],
 textarea {
@@ -25,99 +29,128 @@ textarea {
     border: 1px solid #757575;
     border-radius: 5px;
 }
+
 /* NAVIGATION BELOW */
 .navigationClass {
     background-color: #355C7D;
-    padding-left: 10px ;
+    padding: 10px;
+    margin: 0px 50px 0px 50px;
     display: grid;
     column-gap: normal;
     box-shadow: 2px 3px 11px 5px rgba(0, 0, 0, 5);
 }
-.navigationLinks {
-    display: flex;
-    justify-content: space-between;
-}
 /* LOGIN PAGE BELOW */
-.logInTitle{
+.logInTitle {
     text-align: center;
     padding: 10px 0px 10px 2px;
- }
- .logInForm{
+}
+
+.logInForm {
     text-align: center;
     padding: 0px 22px 22px 22px;
     margin-left: 55px;
     margin-right: 55px;
- }
- /* SIGN UP PAGE BELOW */
- .signUpTitle{
-     text-align: center;
-     padding: 10px 0px 10px 2px;
- }
- .signUpForm{
+}
+
+.loginButton{
+    padding: 5px;
+    border-radius: 4px;
+    color: white;
+    background-color: #547980;
+}
+
+/* SIGN UP PAGE BELOW */
+.signUpTitle {
+    text-align: center;
+    padding: 10px 0px 10px 2px;
+}
+
+.signUpForm {
     padding: 0px 22px 22px 22px;
     margin-left: 55px;
     margin-right: 55px;
- }
-
-
-
-
-
-
-
-
+}
 
 /* TASK LIST PAGE BELOW */
-.taskListTitle{
+.taskListTitle {
     text-align: center;
-    padding: 10px 10px 5px 10px;
+    padding: 20px 10px 5px 10px;
 }
-.searchBarDiv{
+
+.searchBarDiv {
     margin: 15px;
 }
-.clearSearchLink{
+
+.searchButton {
+    padding: 3px;
+    margin-top: 5px;
+    border-radius: 4px;
+    color: white;
+    background-color: #547980;
+}
+
+.clearSearchLink {
     padding-left: 10px;
 }
-.addTaskLink{
-    padding-left: 40px ;
+
+.addTaskLink {
+    padding-left: 40px;
 }
-.tasksDiv{
+
+.tasksDiv {
     border-top: solid black 1px;
     padding-top: 20px;
     padding-bottom: 2px;
     padding-left: 0.5px;
 }
-.completedTask{
+
+.completedTask {
     display: flex;
     justify-content: space-between;
-    padding: 0px 40px 0px 20px; 
-    margin: 10px;
+    padding: 0px 55px 0px 20px;
+    margin: 5px;
 }
-.inCompletedTask{
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 10px 0px 20px; 
-    margin: 10px;
-}
-.linkClass{
+
+.completedDeleteLink {
     border: solid black 1px;
     border-radius: 4px;
     padding: 5px;
 }
 
+.inCompletedTask {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 0px 20px;
+    margin: 10px;
+}
 
+.linkClass {
+    border: solid black 1px;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+}
 
+.noTask {
+    text-align: center;
+    padding: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(0, end);
+    animation-fill-mode: forwards;
+}
 
+@keyframes typing {
+    from {
+        width: 30%
+    }
 
-
-
-
-
-
-
-
-
-
+    to {
+        width: 100%
+    }
+}
 
 /* DETAIL PAGE BELOW */
 .taskDetailDiv {
@@ -126,65 +159,77 @@ textarea {
     margin-top: 100px;
     padding: 35px;
 }
-.detailTags{
-    border: solid black 2px;
-    border-radius: 3px;
+
+.detailTags {
+    border: solid black 1px;
+    border-radius: 4px;
     padding: 5px;
     margin: 5px;
 }
 
-
-
-
-
-
-
-
 /* TASK CREATE PAGE */
-.addTaskTitle{
+.addTaskTitle {
     text-align: center;
     padding-top: 30px;
 }
-.addTaskForm{
+
+.addTaskForm {
     text-align: center;
     padding: 0px 22px 22px 22px;
     margin-left: 55px;
     margin-right: 55px;
 }
-.submitButton{
-   margin: 20px;
+
+.submitButton {
+    border-radius: 4px;
+    color: white;
+    background-color: #547980;
+    margin: 20px;
 }
+
 /* UPDATE PAGE BELOW */
-.updateTitle{
+.updateTitle {
     text-align: center;
     padding-top: 30px;
 }
-.updateForm{
+
+.updateForm {
     text-align: center;
     padding: 0px 22px 22px 22px;
     margin-left: 55px;
     margin-right: 55px;
 }
+
 /* DELETE PAGE BELOW */
-.deleteTaskTitle{
+.deleteTaskTitle {
     text-align: center;
     padding: 30px;
 }
-.deleteTaskOptions{
+
+.deleteTaskOptions {
     text-align: center;
     padding: 0px 80px 40px 80px;
 }
+.deleteButton{
+    border-radius: 4px;
+    color: white;
+    background-color: #547980;
+}
+
 /* ABOUT PAGE */
-.devName{
+.devName {
     padding-top: 20px;
     text-align: center;
 }
-.aboutPar, .contactMe{
-    font-weight:bolder;
+
+.aboutPar,
+.contactMe {
+    font-weight: bolder;
     padding: 28px;
 }
+
 /* HOME PAGE */
-.homePageClass{
+.homePageClass {
     text-align: center;
     padding: 30px;
 }
