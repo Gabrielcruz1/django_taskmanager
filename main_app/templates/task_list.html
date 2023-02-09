@@ -16,16 +16,6 @@
     </form>
 </div>
 
-<!-- </br> -->
-<!-- ADD TASK FORM  -->
-<!-- <form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="text" name="name" title="title" placeholder="Add Task" />
-    <input type="submit" value="Submit" />
-<a href="{% url 'task_create' %}">Add Task</a>
-</form> -->
-
 <!-- TASK LIST -->
 
 {% for task in tasks reversed %}
