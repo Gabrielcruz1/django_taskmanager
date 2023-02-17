@@ -165,11 +165,11 @@ textarea {
 .taskDetailDiv {
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 80px;
     padding: 35px;
 }
 
-.detailTags {
+.detailLinks {
     border: solid black 1px;
     border-radius: 4px;
     padding: 5px;
@@ -192,8 +192,10 @@ textarea {
 .submitButton {
     border-radius: 4px;
     color: white;
-    background-color: #547980;
+    border: solid black 1px;
     margin: 20px;
+    background-color: #1390af;
+    font-weight: 900;
 }
 
 /* UPDATE PAGE BELOW */
@@ -221,8 +223,10 @@ textarea {
 }
 .deleteButton{
     border-radius: 4px;
+    border: solid black 1px;
     color: white;
-    background-color: #547980;
+    background-color: #1390af;
+    font-weight: 900;
 }
 
 /* ABOUT PAGE */
@@ -241,4 +245,18 @@ textarea {
 .homePageClass {
     text-align: center;
     padding: 30px;
+}
+
+
+@media screen and (max-width: 844px){
+
+    .taskDetailDiv{
+        margin: 35px 0px 0px 0px;
+        display: flex;
+    }
+    .detailLinks{
+        display: flex;
+    }
+
+
 }

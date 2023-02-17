@@ -3,9 +3,9 @@
 <div class="taskDetailDiv">
     {{task.title.title}} -- DUE DATE:
     {{task.description.title}}
-    <span >
-        <a class="detailTags" href="{% url 'task_list' %}">Back to list</a>
-        <a class="detailTags" href="{% url 'task_delete' task.pk %}"> Remove </a>
-    </span>
+    <span class="detailButtons">
+            <a class="detailLinks" href="{% url 'task_list' %}">Back to list</a>
+            <a class="detailLinks" href="{% url 'task_delete' task.pk %}"> Remove </a>
+        </span>
 </div>
 {% endblock %}
