@@ -17,9 +17,8 @@
 </head>
 
 <body>
-    <h1>TASK MANAGER</h1>
+    <h1 class="heading">TASK MANAGER</h1>
     {% if user.is_authenticated %}
-
     <div class="navigationClass">
         <span class="navGreet"> Hello {{user| title}}</span>
         <a href="/tasks/">Task List</a>
@@ -27,10 +26,11 @@
         <a href="{% url 'logout' %}">Logout</a>
     </div>
     {% else %}
-    <a href="/about">About</a>
-    <a href="{% url 'login' %}">Log In</a>
-    <a href="{% url 'signup' %}">Sign Up</a>
-
+    <div  class="navigationClass" >
+        <a href="/about">About</a>
+        <a href="{% url 'login' %}">Log In</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+    </div>
     {% endif %}
     <div class="container">
 
