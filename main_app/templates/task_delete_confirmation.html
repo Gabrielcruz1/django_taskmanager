@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
 <h1 class="deleteTaskTitle">Are you sure you want to Delete {{task.title}}?</h1>
-<form method="post">
-    {% csrf_token %}
-    <div class="deleteTaskOptions" >
-        <a class="cancel" href="{% url 'task_list' %}">&#8592</a>
+<div class="deleteTaskOptions">
+    <form method="post">
+        {% csrf_token %} {{ form|crispy }}
+        <a class="cancel" style="font-size: 20px;" href="{% url 'task_list' %}">&#8592</a>
         <input class="deleteButton" type="submit" value="Confirm" />
-    </div>
-</form>
+    </form>
+</div>
 {% endblock %}

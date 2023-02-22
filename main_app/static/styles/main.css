@@ -227,7 +227,8 @@ textarea {
 
 .deleteTaskOptions {
     text-align: center;
-    padding: 0px 80px 40px 80px;
+    padding: 0px 22px 22px 22px;
+
 }
 .deleteButton{
     border-radius: 4px;

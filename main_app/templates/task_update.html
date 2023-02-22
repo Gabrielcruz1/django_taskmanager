@@ -5,7 +5,7 @@
 <div class="updateForm"> 
 <form method="post">
   {% csrf_token %} {{ form|crispy }}
-  <a class="" href="{% url 'task_list' %}">Back to list</a>
+  <a class="" style="font-size: 20px;" href="{% url 'task_list' %}">&#8592</a>
   <input class="submitButton" type="submit" value="Submit" />
 </form>
 </div>
