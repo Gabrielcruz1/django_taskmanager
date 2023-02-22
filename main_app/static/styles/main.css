@@ -80,7 +80,7 @@ textarea {
     margin-right: 55px;
 }
 
-/* TASK LIST PAGE BELOW */
+/* TASK LIST PAGE */
 .taskListTitle {
     text-align: center;
     padding: 20px 10px 5px 10px;
@@ -89,6 +89,11 @@ textarea {
 .searchBarDiv {
     margin: 15px;
 }
+/* .searching{
+    display: flex;
+    padding: 20px;
+
+} */
 
 .searchButton {
     padding: 3px;
@@ -103,10 +108,10 @@ textarea {
 }
 
 .addTaskLink {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0px 40px 5px 0px;
+    margin: 2px 0px 0px 20px;
     font-size: 40px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.999);
 }
 
 .tasksDiv {
