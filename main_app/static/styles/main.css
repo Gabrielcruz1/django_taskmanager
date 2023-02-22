@@ -146,6 +146,7 @@ textarea {
     border-radius: 4px;
     padding: 5px;
     margin: 5px;
+    font-size: 20px;
 }
 
 .noTask {
