@@ -33,7 +33,7 @@
     <div class="inCompletedTask">
         <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a>
         <span>
-            <a class="linkClass" href="{% url 'task_update' task.pk %}"> Update</a>
+            <a class="linkClass" href="{% url 'task_update' task.pk %}"> &#9998</a>
             <a class="linkClass" href="{% url 'task_delete' task.pk %}"> Delete </a>
         </span>
         {% endif %}
