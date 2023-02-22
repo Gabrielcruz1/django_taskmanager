@@ -12,8 +12,10 @@
         <input type="text" name="name" title="title" placeholder="Search Task" />
         <input class="searchButton" type="submit" value="Search" />
         <a class="clearSearchLink" href="{% url 'task_list' %}">Clear Search</a>
-        <a class="addTaskLink" href="{% url 'task_create' %}">Add Task</a>
     </form>
+</div>
+<div>
+    <a class="addTaskLink" href="{% url 'task_create' %}">&#43;</a>
 </div>
 
 <!-- TASK LIST -->
@@ -26,16 +28,16 @@
         <a class="completedDeleteLink" href="{% url 'task_delete' task.pk %}"> Delete </a>
     </div>
     {% else %}
-        <div class="inCompletedTask">
-            <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a>
-         <span>
+    <div class="inCompletedTask">
+        <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a>
+        <span>
             <a class="linkClass" href="{% url 'task_update' task.pk %}"> Update</a>
             <a class="linkClass" href="{% url 'task_delete' task.pk %}"> Delete </a>
         </span>
-            {% endif %}
-        </div>
-        {% empty %}
-        <h3 class="noTask"> No Tasks Due.. Add a task! </h3>
-        {% endfor %}
+        {% endif %}
+    </div>
+    {% empty %}
+    <h3 class="noTask"> No Tasks Due.. Add a task! </h3>
+    {% endfor %}
     {% endblock %}
 </div>

@@ -18,7 +18,7 @@ a:hover {
 }
 
 .container {
-    background-color: #287bc3;
+    background-color: #bacbdb;
     margin: auto;
     max-width: 600px;
     box-shadow: 2px 3px 11px 2px rgba(0, 0, 0, 5);
@@ -35,7 +35,7 @@ textarea {
 
 /* NAVIGATION BELOW */
 .navigationClass {
-    background-color: #287bc3;
+    background-color:  #bacbdb;
     padding: 3px 0px 3px 40px;
     margin: auto;
     max-width: 700px;
@@ -103,7 +103,10 @@ textarea {
 }
 
 .addTaskLink {
-    padding-left: 40px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 40px 5px 0px;
+    font-size: 40px;
 }
 
 .tasksDiv {
@@ -227,6 +230,7 @@ textarea {
     color: white;
     background-color: #1390af;
     font-weight: 900;
+    padding: 5px 7px 5px 7px;
 }
 
 /* ABOUT PAGE */
