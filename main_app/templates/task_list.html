@@ -27,7 +27,9 @@
     {% if task.complete %}
     <div class="completedTask">
         <s> <a href="{% url 'task_detail' task.pk %}"> {{task.title.title}}</a></s>
-        <a class="completedDeleteLink" href="{% url 'task_delete' task.pk %}"> Delete </a>
+        <span>
+            <a class="linkClass" style="margin-right: -10px;" href="{% url 'task_delete' task.pk %}"> &#9249 </a>
+        </span>
     </div>
     {% else %}
     <div class="inCompletedTask">

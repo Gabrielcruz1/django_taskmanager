@@ -128,12 +128,6 @@ textarea {
     margin: 5px;
 }
 
-.completedDeleteLink {
-    border: solid black 1px;
-    border-radius: 4px;
-    padding: 5px;
-}
-
 .inCompletedTask {
     display: flex;
     justify-content: space-between;
