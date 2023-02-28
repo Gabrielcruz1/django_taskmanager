@@ -10,7 +10,7 @@
     <form method="get">
         {{ form|crispy }}
         <div class="searching">
-            <input type="text" name="name" title="title" placeholder="Search Task" />
+            <input type="text" name="name" title="title" placeholder="Search tasks" />
             <input class="searchButton" type="submit" value="Search" />
             <a class="clearSearchLink" href="{% url 'task_list' %}">Clear Search</a>
         </div>
